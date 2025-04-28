@@ -1,0 +1,49 @@
+.sidebar {
+  width: 100%;
+  max-width: 280px;
+  padding-top: 20px;
+  font-size: 14px;
+  padding-right: 1em;
+}
+
+.filterItem {
+  margin-bottom: 20px;
+}
+
+.separator {
+  border: 0.5px solid #eee;
+  margin: 20px 0;
+}
+
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sectionContent {
+  margin-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selectAll {
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

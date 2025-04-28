@@ -1,0 +1,135 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  font-size: 14px;
+  width: 90%;
+  margin: auto;
+}
+
+.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.subscribe,
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-grow: calc(100);
+  min-width: 250px;
+  margin: 10px;
+  gap: 1em;
+  max-width: 40%;
+}
+
+.subscribe p,
+.contact p {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.contact small {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.currency {
+  display: flex;
+}
+
+.currency img {
+  height: 1em;
+  border-radius: 50%;
+}
+
+.currency p {
+  padding-left: 0.5em;
+  padding-top: 0.2em;
+}
+
+.subscribeForm {
+  margin-top: 10px;
+  display: flex;
+}
+
+.subscribeForm input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+}
+
+.subscribeForm button {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.separator {
+  border: 0.5px solid #333;
+  margin: 20px 0;
+}
+
+.bottomSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footerColumn {
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footerColumnList {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerColumn h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footerColumnList span {
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.socialIcons img,
+.paymentIcons img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.socialIcons {
+  margin-bottom: 20px;
+}
+
+.paymentIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topSection,
+  .bottomSection {
+    flex-direction: column;
+  }
+}

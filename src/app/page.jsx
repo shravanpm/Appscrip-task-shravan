@@ -1,23 +1,54 @@
 "use client";
 import styles from "./page.module.css";
 import Sidebar from "./components/Sidebar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Products } from "./components/Products";
 
 export default function Home() {
   const [showFilter, setShowFilter] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  useEffect(() => {
+    // Set the initial width
+    setScreenWidth(window.innerWidth);
+
+    // Update the width when window resizes
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (screenWidth < 768) {
+      setShowFilter(false);
+    }
+  }, [screenWidth]);
+
   return (
     <div className={styles.main}>
       <div className={styles.filterBar}>
         <div className={styles.filterBarLeft}>
-          <h4>3425 ITEMS</h4>
-          <button onClick={() => setShowFilter(!showFilter)}>
-            {showFilter ? "< HIDE FILTER" : "> SHOW FILTER"}
+          {screenWidth > 800 && <h4>3425 ITEMS</h4>}
+          <button
+            onClick={() => {
+              setShowFilter(!showFilter);
+            }}
+          >
+            {screenWidth < 800
+              ? "FILTER"
+              : showFilter
+              ? "< HIDE FILTER"
+              : "> SHOW FILTER"}
           </button>
         </div>
         <div className={styles.dropdown}>

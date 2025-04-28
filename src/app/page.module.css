@@ -36,6 +36,7 @@
   position: relative;
   display: inline-block;
   padding-top: 0.35em;
+  color: black;
   /* width: 30%; */
 }
 
@@ -43,6 +44,7 @@
   border: none;
   background-color: white;
   font-weight: 700;
+  color: black;
 }
 
 .dropdownContent {

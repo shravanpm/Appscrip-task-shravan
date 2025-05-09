@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Products } from "./components/Products";
 
 export default function Home() {
-  const [showFilter, setShowFilter] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -14,17 +14,14 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Set the initial width
     setScreenWidth(window.innerWidth);
 
-    // Update the width when window resizes
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

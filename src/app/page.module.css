@@ -30,6 +30,7 @@
   color: #888792;
   background-color: white;
   border: none;
+  cursor: pointer;
 }
 
 .dropdown {

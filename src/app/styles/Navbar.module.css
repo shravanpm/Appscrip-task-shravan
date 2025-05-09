@@ -42,6 +42,11 @@
 .navbarLogo img {
   height: 1.5rem;
   width: 1.5rem;
+  cursor: pointer;
+}
+
+.navbarTopRight span {
+  cursor: pointer;
 }
 
 /* Responsive */
